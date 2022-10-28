@@ -53,11 +53,16 @@ body{
 
 .navigation__items{
     display: grid;
-    grid-template-columns: repeat(5, 15vw);
+    grid-template-columns: repeat(6, 10vw);
     text-align: center;
 }
 .navigation__item{
     font-size: 1.1vw;
+    height:100%
+}
+.navigation__item-link{
+    font-size: 1.1vw;
+    height:100%
 }
 .intro__container{
     position: relative;
@@ -76,7 +81,23 @@ body{
     display: inline-block;
     margin-bottom: 1vh;
 }
-
+.link-active{
+    position: relative;
+    font-weight: bold;
+    font-size: 1.3vw;
+}
+.link-active:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    border: 2px solid white;
+    bottom: -100%;
+    left:0;
+    border-top: none;
+    border-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+    border-image-slice: 1;
+}
 
 .intro__animation-title{
     color: white;
@@ -149,7 +170,30 @@ body{
     margin: 0 auto;
     display: block;
 }
-
+.button-link{
+    width: 14vw;
+    height: 4vw;
+    font-size: 1.7vw;
+    margin-top: 6vh;
+    background: linear-gradient(#3b06b7, #270770 90%, #3b06b7 100%);
+    border-radius: 1vh;
+    box-shadow: 0 2px 3px black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: all 0.2s
+}
+.button-link:hover{
+    filter:brightness(0.8);
+    transform: scale(1.03)
+}
+.button-link:active{
+    filter:brightness(0.6);
+    transform: scale(1)
+}
+.block-container-none{
+    display: none;
+}
 
 @keyframes imageAni {
     0%{
@@ -174,17 +218,6 @@ body{
     }
 }
 body::-webkit-scrollbar {
-    width: 10px;
-    margin: 5px 0;
-    padding: 2px;
+    display: none;
   }
-  
-  body::-webkit-scrollbar-track {
-    background: rgba(43, 2, 157, 0.111);  
-    border: 2px solid rgb(28, 0, 154); 
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: rgb(28, 0, 154);
-    border-radius: 20px;
- }
+ 
