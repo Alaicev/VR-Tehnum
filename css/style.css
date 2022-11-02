@@ -17,9 +17,10 @@ html{
      'Droid Sans', 
      'Helvetica Neue', 
      sans-serif;
+     font-size: 1vw;
 }
 body{
-    background-color: rgb(32, 32, 33);
+    /* background-color: rgb(32, 32, 33); */
     overflow-x: hidden;
 }
 .header{
@@ -30,7 +31,7 @@ body{
 .wrapper{
     padding: 0 2vw;
     margin: 0 auto;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .navigation{
     display: flex;
@@ -53,14 +54,20 @@ body{
 
 .navigation__items{
     display: grid;
-    grid-template-columns: repeat(5, 15vw);
+    grid-template-columns: repeat(5, 13vw);
     text-align: center;
 }
 .navigation__item{
     font-size: 1.1vw;
+    height:100%
+}
+.navigation__item-link{
+    font-size: 1.1vw;
+    height:100%
 }
 .intro__container{
     position: relative;
+    height: 100vh;
 }
 .intro__title-container{
     width:96%;
@@ -76,7 +83,24 @@ body{
     display: inline-block;
     margin-bottom: 1vh;
 }
-
+.link-active{
+    position: relative;
+    font-weight: bold;
+    font-size: 1.3vw;
+}
+.link-active:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    border: 2px solid white;
+    bottom: -100%;
+    left:0;
+    border-top: none;
+    border-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+    border-image-slice: 1;
+    transform: skewX(-16deg)
+}
 
 .intro__animation-title{
     color: white;
@@ -88,12 +112,12 @@ body{
     color: white;
     font-size: 1.5vw;
 }
-#vr,
+/* #vr,
 #trening {
     color: white;
     font-size: 1vw;
-}
-.vr__container{
+} */
+/* .vr__container{
     background: linear-gradient(rgb(32, 32, 33) 10%, rgba(20,30,100,0) 80%,rgba(32, 32, 33,1)),
     linear-gradient(90deg,rgba(32, 32, 33,1) 30%, rgba(20,30,100,1) 90%,rgba(32, 32, 33,1));
     padding: 40px 0;
@@ -102,54 +126,44 @@ body{
     background: linear-gradient(rgb(32, 32, 33) 10%, rgba(20,30,100,0) 80%,rgba(32, 32, 33,1)),
     linear-gradient(270deg,rgba(32, 32, 33,1) 30%, rgba(20,30,100,1) 90%,rgba(32, 32, 33,1));
     padding: 40px 0;
-}
+} */
 .title{
     width: 100%;
-    text-align: center;
-    padding-bottom: 50px;
-}
-.vr__text{
-    text-align: center;
-}
-.vr__text .vr__text-info{
-    padding: 20px 0;
-}
-.vr__text-info{
-    padding-bottom: 20px;
-}
-.vr__first-info-container{
-    display: flex;
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    align-items: center;
-    margin-bottom:100px
-}
-.vr__glasses-image{
-    height: 300px;
-    width:500px;
-    margin:auto;
-    padding-top: 50px;
-    animation: imageAni 7s infinite;
-    position: relative;
-}
-.vr__glasses-image::before{
-    content: "";
-    position: absolute;
-    top: 230px;
-    left: 140px;
-    width: 220px;
-    height: 70px;
-    border-radius: 50%;
-    background-color:black;
-    filter: blur(5px);
-    animation: shadowAni 7s infinite
-}
-.vr__glasses-image img{
-    width: 50%;
-    margin: 0 auto;
-    display: block;
+    text-align: left;;
+    padding-bottom: 4vh;
 }
 
+.about{
+    background-image: url(./../assets/images/Back-about.jpg);
+    background-repeat: repeat-x;
+    background-size:auto 100%;
+    animation: backgroundImahe 25s linear infinite;
+    box-shadow: inset 0 0 3vw 3vw #ffffff;
+    overflow: hidden;
+}
+
+.about__VR-content{
+    /* height: 100vh; */
+    position: relative;
+}
+
+.about__vr-text-container{
+    width: 70vw;
+    padding-left: 20vw;
+    height: 70vh;
+    background-color: #ffffff;
+    transform: skewX(-16deg) translateX(-20vw);
+    box-shadow: 0.5vw 0 3vw 3vw rgb(255, 255, 255);;
+}
+.about__text{
+    width: 40vw;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;;
+}
+.about__text-info{
+    padding-bottom: 2vh;
+}
 
 @keyframes imageAni {
     0%{
@@ -173,18 +187,16 @@ body{
         transform: scale(1)
     }
 }
-body::-webkit-scrollbar {
-    width: 10px;
-    margin: 5px 0;
-    padding: 2px;
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: rgba(43, 2, 157, 0.111);  
-    border: 2px solid rgb(28, 0, 154); 
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: rgb(28, 0, 154);
-    border-radius: 20px;
- }
+@keyframes backgroundImahe {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 122%;
+    }
+}
+
+/* body::-webkit-scrollbar {
+    display: none;
+  } */
+ 
