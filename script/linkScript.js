@@ -7,8 +7,8 @@ function classRemote(el) {
     el.classList.remove("link-active")
 }
 
-links.forEach((el, i) => {el.addEventListener("click",()=>{
-    links.forEach((y, i) => {
+links.forEach((el) => {el.addEventListener("click",()=>{
+    links.forEach((y) => {
         classRemote(y)
     })
     el.classList.add("link-active")
@@ -17,6 +17,7 @@ links.forEach((el, i) => {el.addEventListener("click",()=>{
 logo.addEventListener("click",()=>{
     links.forEach((i) => {classRemote(i)})
 })
-btn.addEventListener("click",()=>{
-    links[0].classList.add("link-active")
-})
+
+
+
+
