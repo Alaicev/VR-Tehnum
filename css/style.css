@@ -22,10 +22,12 @@ html{
 body{
     /* background-color: rgb(32, 32, 33); */
     overflow-x: hidden;
+    background-color: #1d1d33;
+    color: white;
 }
 .header{
     width: 100%;
-    position:absolute;
+    position:fixed;
     z-index: 2;
 }
 .wrapper{
@@ -101,7 +103,10 @@ body{
     border-image-slice: 1;
     transform: skewX(-16deg)
 }
-
+.header-scroll{
+    background: linear-gradient(rgba(228, 228, 228, 1) rgb(124, 124, 124));
+}
+/* Header */
 .intro__animation-title{
     color: white;
     font-size: 3.5vw;
@@ -138,7 +143,7 @@ body{
     background-repeat: repeat-x;
     background-size:auto 100%;
     animation: backgroundImahe 25s linear infinite;
-    box-shadow: inset 0 0 3vw 3vw #ffffff;
+    box-shadow: inset 0 0 2vw 2vw #1d1d33;
     overflow: hidden;
 }
 
@@ -151,9 +156,9 @@ body{
     width: 70vw;
     padding-left: 20vw;
     height: 70vh;
-    background-color: #ffffff;
+    background-color: #1d1d33;
     transform: skewX(-16deg) translateX(-20vw);
-    box-shadow: 0.5vw 0 3vw 3vw rgb(255, 255, 255);;
+    box-shadow: 0.5vw 0 3vw 3vw #1d1d33;
 }
 .about__text{
     width: 40vw;
@@ -163,6 +168,29 @@ body{
 }
 .about__text-info{
     padding-bottom: 2vh;
+}
+#vr{
+    padding: 10vh;
+}
+.title__container{
+    margin-bottom: 10vh;
+}
+.vr__title{
+    text-align: center;
+}
+.vr__prew-text{
+    background-color:#292950 ;
+    padding: 5vh 6vw;
+    font-size: 1.5vw;
+    font-weight: 100;
+}
+.prob{
+    width: 100%;
+    height: 50vh;
+    border-top: 1px solid transparent;
+    border-top-left-radius: 50% 200px;
+    border-top-right-radius: 50% 200px;
+    background: linear-gradient(rgba(255, 255, 255, 0.03) 5%,rgba(255,255,255, 0) 40%);
 }
 
 @keyframes imageAni {
