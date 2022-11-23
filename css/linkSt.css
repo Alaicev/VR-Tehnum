@@ -1,0 +1,61 @@
+.link{
+    position: relative;
+    height: 40vw;
+    background-image: url(../assets/images/Body-back.png)
+}
+
+.link__scew-block{
+    position: absolute;
+    width: 80vw;
+    right:-30vw;
+    height: 40vw;
+    background-color: #141424;
+    transform: skewX(-10deg);
+    box-shadow: 0.5vw 0 3vw 3vw #1d1d33;
+}
+.link__text-container {
+    position: absolute;
+    right: 10vw;
+    top: 3.5vw
+}
+.link__title{
+    margin-bottom: 2vw;
+}
+form{
+    width: 30vw;
+}
+input,
+textarea {
+    width: 30vw;
+    height: 4vw;
+    background-color: #0e0e18;
+    border: none;
+    padding: 1.2vw 2vw;
+    border-radius: 1vw;
+    display: block;
+    margin-bottom: 2vw;
+    color: #ffffff;
+    font-size:1.2vw
+}
+input[type="submit"]{
+    width: 15vw;
+    margin: auto;
+    font-size: 1.3vw;
+    color: #fff;
+    background-color: #181842;
+    transition: all 0.2s
+}
+
+input[type="submit"]:hover{
+    background-color: #131335;
+}
+
+input::placeholder,
+textarea::placeholder{
+    font-size:1.2vw
+}
+
+textarea{
+    height:10vw;
+    resize: none
+}

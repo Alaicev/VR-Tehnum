@@ -1,0 +1,155 @@
+#vr{
+    padding: 10vh;
+    position: relative;
+    background-image: url(../assets/images/Glasses-image.png);
+    background-repeat: no-repeat;
+    background-color: #1a1a35;
+    background-size: 80%;
+    background-position: 50vw 20vh
+}
+.title__container{
+    margin-bottom: 10vh;
+}
+.vr__title,
+.vr__perfect-title{
+    text-align: center;
+}
+
+.vr__perfect-title{
+    margin-bottom: 10vh;;
+}
+.vr__prew-text{
+    background-color:#292950 ;
+    padding: 5vh 6vw;
+    font-size: 1.5vw;
+    font-weight: 100;
+    margin-bottom: 10vh;
+}
+.vr__text-items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    gap: 10vw;
+    margin: 0 auto 20vh;
+}
+.vr__text{
+    padding-left: 0.4vw;
+    font-size: 1.2vw;
+    position: relative;
+    border-left: 0.3vw solid #493C6B;
+    margin-bottom: 15vh;
+    font-weight: 100;
+}
+.vr__text:nth-child(2n){
+    margin-bottom: 0;
+}
+.vr__text::before{
+    position: absolute;
+    content: "";
+    width: 3vw;
+    height: 3vw;
+    top: -1.6vw;
+    left: -1.75vw;
+    background-image: url(./../assets/images/perfext.png);
+    z-index: 3;
+    background-size: cover;
+}
+.vr__video-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.vr__video-container video{
+    width: 100%;
+}
+.vr__video{
+    width: 60%;
+    position: relative;
+}
+.video-player{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-play{
+    position: relative;
+    height: 4vw;
+    width: 4vw;
+    background-image: url(./../assets/images/Play3.png);
+    background-size: cover;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.video-control-none{
+    display: none;;
+}
+.button-play::after,
+.button-play::before{
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.button-play::before{
+    width: 100%;
+    height: 100%;
+    background-size: 100% auto;
+    top: 0;
+    left: 0;
+    background-image: url(./../assets/images/Play2.png);
+    animation: pleyLeft 10s linear infinite;
+}
+.button-play::after{
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    background-size: auto 100%;
+    background-image: url(./../assets/images/Play1.png); 
+    animation: pleyRight 10s linear infinite;
+}
+.img-container img{
+    width: 50%;
+}
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.moon{
+    width: 100vw;
+    height: 50vh;
+    position: absolute;
+    left: 0;
+    top:5vh;
+    border-top: 1px solid transparent;
+    border-top-left-radius: 50% 200px;
+    border-top-right-radius: 50% 200px;
+    background: linear-gradient(rgba(255, 255, 255, 0.03) 5%,rgba(255,255,255, 0) 40%);
+}
+.button-play:hover{
+    transform: scale(1.1);
+}
+
+@keyframes pleyLeft {
+    0%{
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pleyRight{
+    0%{
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}

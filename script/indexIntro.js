@@ -1,11 +1,12 @@
 (function(){
     let canvas = document.createElement('canvas');
     ctx = canvas.getContext('2d');
+    // canvas.classList.add('canvas')
     w = canvas.width = innerWidth
     h = canvas.height = innerHeight
     particles = [],
     properties = {
-        bgColor: 'rgb(32, 32, 33)',
+        bgColor: '#141424',
         particleColor: 'rgba(255, 0, 255, 1)',
         particleRadius : 3,
         particleCount : 100,

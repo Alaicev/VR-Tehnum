@@ -1,0 +1,45 @@
+.ar{
+    /* background-image:url(../assets/images/Body-back.png);
+    background-position: center; */
+
+}
+
+
+.ar__text-container {
+    width: 70vw;
+    margin: 0 auto;
+    margin-top: 15vh;
+    padding: 2vw;
+    font-size: 1.2vw
+}
+.ar__title{
+    text-align: center;
+    padding-bottom: 10vh;
+    font-size: 2vw
+}
+.ar__info{
+    display: grid;
+    grid-template-columns: 3fr 10fr;
+}
+.ar__info:nth-child(3){
+    grid-template-columns: 10fr 3fr;
+}
+.ar__photo{
+    width: 100%;
+    height: 15vw;
+    background-color:#1a1a7583;
+}
+.text{
+    height:15vw;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(1, 8, 79, 0.495);
+}
+.ar__text{
+    padding:8vh
+}
+.ar__sub-title{
+    margin: 10vh;
+}
