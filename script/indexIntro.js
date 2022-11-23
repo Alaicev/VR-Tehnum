@@ -1,6 +1,7 @@
 (function(){
     let canvas = document.createElement('canvas');
     ctx = canvas.getContext('2d');
+    // canvas.classList.add('canvas')
     w = canvas.width = innerWidth
     h = canvas.height = innerHeight
     particles = [],

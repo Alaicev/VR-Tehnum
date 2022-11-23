@@ -2,6 +2,10 @@
     position: relative;
     height: 100vh;
 }
+.canvas{
+    position: fixed;
+    z-index:-2
+}
 .intro__title-container{
     width:96%;
     margin: 0 auto;
