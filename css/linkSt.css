@@ -1,7 +1,8 @@
 .link{
     position: relative;
     height: 40vw;
-    background-image: url(../assets/images/Body-back.png)
+    background-image: url(../assets/images/Body-back.png);
+    overflow: hidden
 }
 
 .link__scew-block{

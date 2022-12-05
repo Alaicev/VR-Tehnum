@@ -18,6 +18,7 @@ html{
      'Helvetica Neue', 
      sans-serif;
      font-size: 1vw;
+     scroll-behavior: smooth;
 }
 body{
     /* background-color: rgb(32, 32, 33); */
