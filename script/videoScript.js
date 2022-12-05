@@ -9,7 +9,7 @@ playButton.addEventListener("click", () => {
         videoPlayer.classList.add("video-control-none")
         isPlay = true
         video.play()
-    }   
+    }  
 })
 
 video.addEventListener("click", () => {

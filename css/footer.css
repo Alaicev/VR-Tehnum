@@ -1,0 +1,45 @@
+.contacts__container{
+    padding: 10vh 10vh 5vh;
+    font-size: 1.3vw;
+}
+.contacts__title{
+    margin-bottom: 5vh;
+    font-size: 2vw;
+}
+.contacts__location p{
+    margin: 1.5vw 0;
+}
+.contacts__links img{
+    width: 2vw
+}
+
+.link-item{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1vw;
+    margin: 1.5vw 0;
+    color: #fff;
+    transition: all 0.2s
+}
+.link-item:hover{
+    color: rgb(167, 167, 167);
+}
+.contacts__grid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1vw solid rgb(160, 160, 160);
+}
+.contacts__support{
+    font-weight: 100;
+    font-size: 1vw;
+    color: rgb(160, 160, 160);
+}
+.contacts__support a{
+    color: rgb(160, 160, 160);
+    text-decoration: underline;
+}
+.contacts__support p{
+    margin: 0.5vw 0;
+}
